@@ -45,7 +45,7 @@ Be prepared for questions by your fellow students and the teachers, but also pre
 
 ### Topics & content
 
-The goal of the project in this semester is to develop a web-based machine learning toolkit for the supervised classification of earth observation data in OpenEO based on openeocubes. Your main tasks will include adapting/extending the existing API to enable supervised classification on the R backend and developing a simple web front-end through which the classification can be conducted and controlled (e.g., choose data, upload/digitize training data, choose hyperparameters, visualize results). Detailed information about the goals and deliverables will be communicated along with the invitation to bid at the start of the semester. 
+The goal of the project in this semester is to develop a web-based machine learning toolkit for the supervised classification of earth observation data in [OpenEO](https://openeo.org/) based on [openeocubes](https://github.com/PondiB/openeocubes). Your main tasks will include adapting/extending the existing API to enable supervised classification on the R backend and developing a simple web front-end through which the classification can be conducted and controlled (e.g., choose data, upload/digitize training data, choose hyperparameters, visualize results). Detailed information about the goals and deliverables will be communicated along with the invitation to bid at the start of the semester. 
 
 Your presentations and handouts will serve as preparation by discussing several relevant topics that form the technical background of this project task. 
 
