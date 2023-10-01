@@ -1,1 +1,0 @@
-# Image Warping and Gdalcubes
