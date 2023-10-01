@@ -1,0 +1,8 @@
+<button onClick={() => {
+            rmInstance.setWaypoints([
+              L.latLng(70.0, 7.0),
+              L.latLng(70.0, 7.1)
+            ])
+          }}>
+            rm test
+          </button>
