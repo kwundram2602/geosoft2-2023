@@ -8,6 +8,21 @@ When someone is working with collections and time series of satellite imagery it
   5. Images from different data products or different satellites are distributed in diverse data formats and structures.
 
 There is already the normal gdal R-package that can adress some of the problems but gdal does not know about time series.
+The R package gdalcubes is aiming to make the work with collections and time series of satellite imagery easier and more interactive.
+
+### The core features of the package are:
+
+1. build regular dense data cubes from large satellite image collections based on a user-defined data cube view          
+   (spatiotemporal extent, resolution, and map projection of the cube)
+2. apply and chaining operations on data cubes
+3. allow for the execution of user-defined functions on data cubes
+4. export data cubes as netCDF files, making it easy to process further, e.g., with stars or raster.
+
+### Image Collections
+
+### Collection Formats
+
+
 
 ## What is image warping ?
 
