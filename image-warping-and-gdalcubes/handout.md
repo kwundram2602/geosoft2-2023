@@ -20,6 +20,8 @@ The R package gdalcubes is aiming to make the work with collections and time ser
 
 ### Data Cubes
  <img width="403" alt="image" src="https://github.com/kwundram2602/geosoft2-2023/assets/134778951/2fe44219-fa86-45cf-bf2e-e2475c89f45f">
+ 
+
 
 
 ### Image Collections
