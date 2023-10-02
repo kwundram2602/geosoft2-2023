@@ -18,6 +18,10 @@ The R package gdalcubes is aiming to make the work with collections and time ser
 3. allow for the execution of user-defined functions on data cubes
 4. export data cubes as netCDF files, making it easy to process further, e.g., with stars or raster.
 
+### Data Cubes
+ <img width="403" alt="image" src="https://github.com/kwundram2602/geosoft2-2023/assets/134778951/2fe44219-fa86-45cf-bf2e-e2475c89f45f">
+
+
 ### Image Collections
 
 ### Collection Formats
