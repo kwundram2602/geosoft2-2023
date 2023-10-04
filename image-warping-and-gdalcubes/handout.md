@@ -34,6 +34,7 @@ v.overview = cube_view(extent=L8.col, dt="P1Y", dx=1000, dy=1000, srs="EPSG:3857
                        aggregation = "median", resampling = "bilinear")
 raster_cube(L8.col, v.overview)
 ```
+meaning 1kmx1km pixel size, yearly temporal resolution, covering the full spatiotemporal extent of the image collection, and using the web mercator spatial reference system
  
 
 
@@ -55,3 +56,8 @@ resize, and resample
 ## what is gdalwarp and what does it do ?
 
 ## How is gdalwarp used in gdalcubes ?
+<hr/>
+
+### Demo in R (also in repo as R file)
+
+
