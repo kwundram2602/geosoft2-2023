@@ -25,10 +25,15 @@ The R package gdalcubes is aiming to make the work with collections and time ser
 
 
 ### Image Collections
+Creating an image collection is one of the first steps when working with gdalcubes. Downloaded satellite data may be stored in a zipped folder first where every image has its own directory containing one GeoTIFF file per band.
 
 ### Collection Formats
 
-
+Collection formats are defined in gdalcubes and determine how required metadata can be derived from the data.
+formats for some Sentinel-2, MODIS, and Landsat products are included.
+All formats can be listed with:
+1. library(gdalcubes)
+2. collection_formats()
 
 ## What is image warping ?
 
