@@ -36,6 +36,7 @@ All formats can be listed with:
 2. collection_formats()
 
 ## What is image warping ?
+resize, and resample
 
 ## what is gdalwarp and what does it do ?
 
