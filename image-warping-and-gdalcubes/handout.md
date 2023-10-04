@@ -9,6 +9,7 @@ When someone is working with collections and time series of satellite imagery it
 
 There is already the normal gdal R-package that can adress some of the problems but gdal does not know about time series.
 The R package gdalcubes is aiming to make the work with collections and time series of satellite imagery easier and more interactive.
+<hr/>
 
 ### The core features of the package are:
 
@@ -17,15 +18,28 @@ The R package gdalcubes is aiming to make the work with collections and time ser
 2. apply and chaining operations on data cubes
 3. allow for the execution of user-defined functions on data cubes
 4. export data cubes as netCDF files, making it easy to process further, e.g., with stars or raster.
+<hr/>
+
+### Image Collections
+Creating an image collection is one of the first steps when working with gdalcubes. Downloaded satellite data may be stored in a zipped folder first where every image has its own directory containing one GeoTIFF file per band.
+<hr/>
 
 ### Data Cubes
  <img width="403" alt="image" src="https://github.com/kwundram2602/geosoft2-2023/assets/134778951/2fe44219-fa86-45cf-bf2e-e2475c89f45f">
  
+ 
+To create a raster data cube we need an image collection and define a data cube view.
+```{r}
+v.overview = cube_view(extent=L8.col, dt="P1Y", dx=1000, dy=1000, srs="EPSG:3857", 
+                       aggregation = "median", resampling = "bilinear")
+raster_cube(L8.col, v.overview)
+```
+ 
 
 
 
-### Image Collections
-Creating an image collection is one of the first steps when working with gdalcubes. Downloaded satellite data may be stored in a zipped folder first where every image has its own directory containing one GeoTIFF file per band.
+
+<hr/>
 
 ### Collection Formats
 
