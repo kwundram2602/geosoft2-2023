@@ -35,7 +35,7 @@ v.overview = cube_view(extent=L8.col, dt="P1Y", dx=1000, dy=1000, srs="EPSG:3857
 raster_cube(L8.col, v.overview)
 ```
 meaning 1kmx1km pixel size, yearly temporal resolution, covering the full spatiotemporal extent of the image collection, and using the web mercator spatial reference system
- 
+The aggregation parameter in the data cube view defines how values from multiple images in the same year shall be combined
 
 
 
