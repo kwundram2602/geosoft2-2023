@@ -83,8 +83,13 @@ gdalwarp(src_dataset,dstfile=file.path(outdir,"tahoe_highrez_utm11.tif"),
 }
 # }
 ```
-Arguments for gdawarp :
-srcfile:   Character. The source file name(s).
+Arguments for gdawarp : <br/>
+
+__srcfile:__   	&emsp;&emsp;&emsp;&emsp;Character. The source file name(s). <br/>
+__dstfile:__	&emsp;&emsp;&emsp;&emsp;Character. The destination file name.<br/>
+  __s_srs:__    &emsp;&emsp;&emsp;&emsp;Character. source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.<br/>
+<br/>
+<br/>
 
 ## How is gdalwarp used in gdalcubes ?
 <hr/>
