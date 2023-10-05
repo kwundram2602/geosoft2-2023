@@ -36,7 +36,7 @@ raster_cube(L8.col, v.overview)
 ```
 meaning 1kmx1km pixel size, yearly temporal resolution, covering the full spatiotemporal extent of the image collection, and using the web mercator spatial reference system
 The aggregation parameter in the data cube view defines how values from multiple images in the same year shall be combined
-
+#### Cube Operators
 <img width="610" alt="image" src="https://github.com/kwundram2602/geosoft2-2023/assets/134778951/c3e01558-da93-4322-ad97-42733d9632ef">
 
 
@@ -54,7 +54,37 @@ All formats can be listed with:
 ## What is image warping ?
 resize, and resample
 
+
 ## what is gdalwarp and what does it do ?
+
+gdalwarp is not part of gdalcubes but part of gdal.
+documentation under : https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp
+
+```{r}
+
+
+# NOT RUN {
+# We'll pre-check to make sure there is a valid GDAL install
+# and that raster and rgdal are also installed.
+# Note this isn't strictly neccessary, as executing the function will
+# force a search for a valid GDAL install.
+outdir <- tempdir()
+gdal_setInstallation()
+valid_install <- !is.null(getOption("gdalUtils_gdalPath"))
+if(require(raster) && require(rgdal) && valid_install)
+{
+# Example from the original gdal_translate documentation:
+src_dataset <- system.file("external/tahoe_highrez.tif", package="gdalUtils")
+# Command-line gdalwarp call:
+# gdalwarp -t_srs '+proj=utm +zone=11 +datum=WGS84' raw_spot.tif utm11.tif
+gdalwarp(src_dataset,dstfile=file.path(outdir,"tahoe_highrez_utm11.tif"),
+		t_srs='+proj=utm +zone=11 +datum=WGS84',output_Raster=TRUE,
+		overwrite=TRUE,verbose=TRUE)
+}
+# }
+```
+Arguments for gdawarp :
+srcfile:   Character. The source file name(s).
 
 ## How is gdalwarp used in gdalcubes ?
 <hr/>
