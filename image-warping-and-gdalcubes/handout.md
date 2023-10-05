@@ -37,6 +37,7 @@ raster_cube(L8.col, v.overview)
 meaning 1kmx1km pixel size, yearly temporal resolution, covering the full spatiotemporal extent of the image collection, and using the web mercator spatial reference system
 The aggregation parameter in the data cube view defines how values from multiple images in the same year shall be combined
 
+<img width="610" alt="image" src="https://github.com/kwundram2602/geosoft2-2023/assets/134778951/c3e01558-da93-4322-ad97-42733d9632ef">
 
 
 
@@ -86,6 +87,7 @@ x = raster_cube(L8.col, v)
 x
 
 # 5. process data cube and plot
+# derive the median values of the RGB bands over time
 
 gdalcubes_options(parallel = 4)
 x |>
