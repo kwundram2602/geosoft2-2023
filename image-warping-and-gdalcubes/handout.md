@@ -22,6 +22,40 @@ The R package gdalcubes is aiming to make the work with collections and time ser
 
 ### Image Collections
 Creating an image collection is one of the first steps when working with gdalcubes. Downloaded satellite data may be stored in a zipped folder first where every image has its own directory containing one GeoTIFF file per band.
+
+Image Collections 
+```{r}
+Image collection object, referencing 180 images with 10 bands
+Images:
+                                      name      left       top    bottom     right
+1 LC08_L1TP_226063_20140719_20170421_01_T1 -54.15776 -3.289862 -5.392073 -52.10338
+2 LC08_L1TP_226063_20140820_20170420_01_T1 -54.16858 -3.289828 -5.392054 -52.11418
+3 LC08_L1GT_226063_20160114_20170405_01_T2 -54.16317 -3.289845 -5.392064 -52.10878
+4 LC08_L1TP_226063_20160724_20170322_01_T1 -54.16317 -3.289845 -5.392064 -52.10878
+5 LC08_L1TP_226063_20170609_20170616_01_T1 -54.17399 -3.289810 -5.392044 -52.11958
+6 LC08_L1TP_226063_20170711_20170726_01_T1 -54.15506 -3.289870 -5.392083 -52.09798
+             datetime        srs
+1 2014-07-19T00:00:00 EPSG:32622
+2 2014-08-20T00:00:00 EPSG:32622
+3 2016-01-14T00:00:00 EPSG:32622
+4 2016-07-24T00:00:00 EPSG:32622
+5 2017-06-09T00:00:00 EPSG:32622
+6 2017-07-11T00:00:00 EPSG:32622
+[ omitted 174 images ] 
+
+Bands:
+        name offset scale unit       nodata image_count
+1    AEROSOL      0     1                           180
+2        B01      0     1      -9999.000000         180
+3        B02      0     1      -9999.000000         180
+4        B03      0     1      -9999.000000         180
+5        B04      0     1      -9999.000000         180
+6        B05      0     1      -9999.000000         180
+7        B06      0     1      -9999.000000         180
+8        B07      0     1      -9999.000000         180
+9   PIXEL_QA      0     1                           180
+10 RADSAT_QA      0     1                           180
+```
 <hr/>
 
 ### Data Cubes
