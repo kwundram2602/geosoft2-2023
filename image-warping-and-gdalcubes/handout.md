@@ -52,38 +52,17 @@ All formats can be listed with:
 2. collection_formats()
 
 ## What is image warping ?
-resize, and resample
+reprojection, rescaling, cropping and resampling of imagery.
 
 
 ## what is gdalwarp and what does it do ?
+https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf  p. 12.
 
 gdalwarp is not part of gdalcubes but part of gdal.
+"The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection."
 documentation under : https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp
 
-```{r}
-
-
-# NOT RUN {
-# We'll pre-check to make sure there is a valid GDAL install
-# and that raster and rgdal are also installed.
-# Note this isn't strictly neccessary, as executing the function will
-# force a search for a valid GDAL install.
-outdir <- tempdir()
-gdal_setInstallation()
-valid_install <- !is.null(getOption("gdalUtils_gdalPath"))
-if(require(raster) && require(rgdal) && valid_install)
-{
-# Example from the original gdal_translate documentation:
-src_dataset <- system.file("external/tahoe_highrez.tif", package="gdalUtils")
-# Command-line gdalwarp call:
-# gdalwarp -t_srs '+proj=utm +zone=11 +datum=WGS84' raw_spot.tif utm11.tif
-gdalwarp(src_dataset,dstfile=file.path(outdir,"tahoe_highrez_utm11.tif"),
-		t_srs='+proj=utm +zone=11 +datum=WGS84',output_Raster=TRUE,
-		overwrite=TRUE,verbose=TRUE)
-}
-# }
-```
-Arguments for gdawarp : <br/>
+ ### Arguments for gdawarp : 
 
 __srcfile:__   	&emsp;&emsp;&emsp;&emsp;Character. The source file name(s). <br/>
 __dstfile:__	&emsp;&emsp;&emsp;&emsp;Character. The destination file name.<br/>
@@ -92,6 +71,12 @@ __dstfile:__	&emsp;&emsp;&emsp;&emsp;Character. The destination file name.<br/>
 <br/>
 
 ## How is gdalwarp used in gdalcubes ?
+The gdalwarp function is found in the gdalUtilities package
+```{r}
+install.packages("gdalUtilities")
+library(gdalUtilities)
+```
+Idee : gdalwarp nutzen um auf das gleiche Referenzsystem bringen bevor man datacube baut.
 <hr/>
 
 ### Demo in R (also in repo as R file)
