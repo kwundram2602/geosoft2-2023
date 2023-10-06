@@ -56,6 +56,8 @@ Bands:
 9   PIXEL_QA      0     1                           180
 10 RADSAT_QA      0     1                           180
 ```
+
+image_count means : how many images cover this band ?
 <hr/>
 
 ### Data Cubes
@@ -70,6 +72,29 @@ raster_cube(L8.col, v.overview)
 ```
 meaning 1kmx1km pixel size, yearly temporal resolution, covering the full spatiotemporal extent of the image collection, and using the web mercator spatial reference system
 The aggregation parameter in the data cube view defines how values from multiple images in the same year shall be combined
+
+```{r}
+Dimensions:
+                low              high count pixel_size chunk_size
+t        2013-01-01        2019-12-31     7        P1Y          1
+y -764014.387686915 -205014.387686915   559       1000        512
+x -6582280.06164712 -5799280.06164712   783       1000        512
+
+Bands:
+        name offset scale nodata unit
+1    AEROSOL      0     1    NaN     
+2        B01      0     1    NaN     
+3        B02      0     1    NaN     
+4        B03      0     1    NaN     
+5        B04      0     1    NaN     
+6        B05      0     1    NaN     
+7        B06      0     1    NaN     
+8        B07      0     1    NaN     
+9   PIXEL_QA      0     1    NaN     
+10 RADSAT_QA      0     1    NaN     
+
+
+```
 #### Cube Operators
 <img width="610" alt="image" src="https://github.com/kwundram2602/geosoft2-2023/assets/134778951/c3e01558-da93-4322-ad97-42733d9632ef">
 
