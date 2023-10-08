@@ -125,7 +125,7 @@ x |>
 ```
 
 ## Further Reading 
-gdal documentation: https://gdal.org/index.html
-gdalcubes: https://r-spatial.org/r/2019/07/18/gdalcubes1.html
-gdal Utilites: https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf
-gdalwarp documentation: https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp
+gdal documentation: https://gdal.org/index.html <br/>
+gdalcubes: https://r-spatial.org/r/2019/07/18/gdalcubes1.html <br/>
+gdal Utilites: https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf <br/>
+gdalwarp documentation: https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp 
