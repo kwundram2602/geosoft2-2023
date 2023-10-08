@@ -1,5 +1,5 @@
 # Image Warping and Gdalcubes
-When someone is working with collections and time series of satellite imagery it is possible to get problems very fast.
+When someone is working with collections and time series of satellite imagery it is to run into problems quickly.
  Some of these problems are :
   1. Images from different areas of the world may have __different spatial reference systems__
   2. The __pixel size__ of a single image sometimes __differs__ among its spectral bands.
