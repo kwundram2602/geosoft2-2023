@@ -1,4 +1,7 @@
 # Image Warping and Gdalcubes
+
+### Problems with time series of satellite imagery
+
 When someone is working with collections and time series of satellite imagery it is possible to run into problems quickly.
  Some of these problems are :
   1. Images from different areas of the world may have __different spatial reference systems__
@@ -7,7 +10,11 @@ When someone is working with collections and time series of satellite imagery it
   4. Time series of images are often irregular when the area of interest covers spatial areas larger than the extent of a           single image.
   5. Images from different data products or different satellites are distributed in diverse data formats and structures.
 
-There is already the normal gdal R-package that can adress some of the problems but gdal does not know about time series.
+## The gdalcubes package
+
+The gdal package is a programm to help process raster data (data conversion, image processing or generating sublets). 
+It is however not possible to work with image time series. 
+
 The R package gdalcubes is aiming to make the work with collections and time series of satellite imagery easier and more interactive.
 <hr/>
 
