@@ -58,11 +58,12 @@ All formats can be listed with:
 1. library(gdalcubes)
 2. collection_formats()
 
-## What is image warping ?
-reprojection, rescaling, cropping and resampling of imagery.
+## Image Warping
+basically editing of imagery:
+(reprojection, rescaling, cropping and resampling).
 
 
-## what is gdalwarp and what does it do ?
+### what is gdalwarp and what does it do ?
 https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf  p. 12.
 
 gdalwarp is not part of gdalcubes but part of gdal.
@@ -123,3 +124,8 @@ x |>
   plot(x, rgb=3:1, zlim=c(0,1200))
 ```
 
+## Further Reading 
+gdal documentation: https://gdal.org/index.html
+gdalcubes: https://r-spatial.org/r/2019/07/18/gdalcubes1.html
+gdal Utilites: https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf
+gdalwarp documentation: https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp
