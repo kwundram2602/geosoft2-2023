@@ -64,18 +64,8 @@ basically editing of imagery:
 
 
 ### what is gdalwarp and what does it do ?
-https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf  p. 12.
-
-gdalwarp is not part of gdalcubes but part of gdal.
-"The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection."
-documentation under : https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp
-
- ### Arguments for gdawarp : 
-
-__srcfile:__   	&emsp;&emsp;&emsp;&emsp;Character. The source file name(s). <br/>
-__dstfile:__	&emsp;&emsp;&emsp;&emsp;Character. The destination file name.<br/>
-  __s_srs:__    &emsp;&emsp;&emsp;&emsp;Character. source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.<br/>
-<br/>
+gdalwarp is not part of gdalcubes instead it is a gdal utility. <br/>
+gdalwarp is a package used to helping with image mosaicing and warping. gdalwarp can reproject to any projection
 <br/>
 
 ## How is gdalwarp used in gdalcubes ?
@@ -84,6 +74,7 @@ The gdalwarp function is found in the gdalUtilities package
 install.packages("gdalUtilities")
 library(gdalUtilities)
 ```
+gdalcubes uses gdalwarp to reproject, resize and resample a GDAL dataset
 Idee : gdalwarp nutzen um auf das gleiche Referenzsystem bringen bevor man datacube baut.
 <hr/>
 
