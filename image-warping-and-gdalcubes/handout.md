@@ -65,7 +65,7 @@ basically editing of imagery:
 
 ### what is gdalwarp and what does it do ?
 gdalwarp is not part of gdalcubes instead it is a gdal utility. <br/>
-gdalwarp is a package used to helping with image mosaicing and warping. gdalwarp can reproject to any projection
+gdalwarp is a function used to helping with image mosaicing and warping. Its main function is to reproject to any projection
 <br/>
 
 ## How is gdalwarp used in gdalcubes ?
@@ -73,9 +73,11 @@ The gdalwarp function is found in the gdalUtilities package
 ```{r}
 install.packages("gdalUtilities")
 library(gdalUtilities)
+
+gdalwarp()
 ```
-gdalcubes uses gdalwarp to reproject, resize and resample a GDAL dataset
-Idee : gdalwarp nutzen um auf das gleiche Referenzsystem bringen bevor man datacube baut.
+gdalcubes uses gdalwarp to reproject, resize and resample a GDAL dataset <br/>
+idea: use gdalwarp to reproject imagery before using gdalcubes for further 
 <hr/>
 
 ### Demo in R (also in repo as R file)
