@@ -117,23 +117,14 @@ All formats can be listed with:
 1. library(gdalcubes)
 2. collection_formats()
 
-## What is image warping ?
-reprojection, rescaling, cropping and resampling of imagery.
+## Image Warping
+basically editing of imagery:
+(reprojection, rescaling, cropping and resampling).
 
 
-## what is gdalwarp and what does it do ?
-https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf  p. 12.
-
-gdalwarp is not part of gdalcubes but part of gdal.
-"The gdalwarp utility is an image mosaicing, reprojection and warping utility. The program can reproject to any supported projection."
-documentation under : https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp
-
- ### Arguments for gdawarp : 
-
-__srcfile:__   	&emsp;&emsp;&emsp;&emsp;Character. The source file name(s). <br/>
-__dstfile:__	&emsp;&emsp;&emsp;&emsp;Character. The destination file name.<br/>
-  __s_srs:__    &emsp;&emsp;&emsp;&emsp;Character. source spatial reference set. The coordinate systems that can be passed are anything supported by the OGRSpatialReference.SetFromUserInput() call, which includes EPSG PCS and GCSes (ie. EPSG:4296), PROJ.4 declarations (as above), or the name of a .prf file containing well known text.<br/>
-<br/>
+### what is gdalwarp and what does it do ?
+gdalwarp is not part of gdalcubes instead it is a gdal utility. <br/>
+gdalwarp is a function used to helping with image mosaicing and warping. Its main function is to reproject to any projection
 <br/>
 
 ## How is gdalwarp used in gdalcubes ?
@@ -141,8 +132,11 @@ The gdalwarp function is found in the gdalUtilities package
 ```{r}
 install.packages("gdalUtilities")
 library(gdalUtilities)
+
+gdalwarp()
 ```
-Idee : gdalwarp nutzen um auf das gleiche Referenzsystem bringen bevor man datacube baut.
+gdalcubes uses gdalwarp to reproject, resize and resample a GDAL dataset <br/>
+idea: use gdalwarp to reproject imagery before using gdalcubes for further 
 <hr/>
 
 ### Demo in R (also in repo as R file)
@@ -182,3 +176,8 @@ x |>
   plot(x, rgb=3:1, zlim=c(0,1200))
 ```
 
+## Further Reading 
+gdal documentation: https://gdal.org/index.html <br/>
+gdalcubes: https://r-spatial.org/r/2019/07/18/gdalcubes1.html <br/>
+gdal Utilites: https://cran.r-project.org/web/packages/gdalUtilities/gdalUtilities.pdf <br/>
+gdalwarp documentation: https://www.rdocumentation.org/packages/gdalUtils/versions/2.0.3.2/topics/gdalwarp 
